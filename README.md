@@ -1,24 +1,65 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ----------- |
+| email              | string     | null: false, unique: true |
+| encrypted_password | string     | null: false |
+| nickname           | string     | null: false |
+| birthday           | date       | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many : tourings
+- has_many : rides
+- has_many : comments
 
-* Configuration
+ ## rides テーブル
 
-* Database creation
+| Column             | Type       | Options     |
+| -------------------| -----------| ----------- |
+| plan               | string     | null: false |
+| displacement_id    | integer    | null: false |
+| text               | text       | null: false |
+| style_id           | integer    | null: false |
+| term_id            | integer    | null: false |
+| area_id            | integer    | null: false |
+| day_id             | date       | null: false |
+| user               | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to : user
+- has_one : touring
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column             | Type       | Options     |
+| -------------------| -----------| ----------- |
+| text               | text       | null: false |
+| user               | references | null: false |
+| ride               | references | null: false |
 
-* ...
+### Association
+
+- belongs_to : user
+- belongs_to : ride
+
+## tourings テーブル
+| Column             | Type       | Options     |
+| -------------------| -----------| ----------- |
+| user               | references | null: false, foreign_key: true |
+| ride               | references | null: false, foreign_key: true |
+
+### Association
+
+- has_many : user
+- belongs_to : ride
+
+
+## user_tourings テーブル
+| Column             | Type       | Options     |
+| -------------------| -----------| ----------- |
+| user               | references | null: false, foreign_key: true |
+| touring            | references | null: false, foreign_key: true |
