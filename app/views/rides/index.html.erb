@@ -1,12 +1,21 @@
 <header>
   <div class="heading">
-    <h1 class="title">Tourist</h1>
+    <%= link_to "Tourist", "/", class:"title" %>
   </div>
   <div class="navbar">
-    <ul class="nav-lists">
+    <%# <ul class="nav-lists">
       <li>ログイン</li>
       <li>新規登録</li>
-    </ul>
+    </ul> %>
+    <div class="nav-lists">
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn' %>
+        <%= link_to "投稿する", "#", class: 'btn' %>
+      <% else %>
+        <%= link_to "ログイン", new_user_session_path, class: 'btn' %>
+        <%= link_to "新規登録", new_user_registration_path, class: 'btn' %>
+      <% end %>
+    </div>
   </div>
 </header>
 
