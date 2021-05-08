@@ -6,4 +6,19 @@ class Ride < ApplicationRecord
   belongs_to :area
 
   belongs_to :user
+
+  with_options presence: true do
+    validates :plan
+    validates :text
+  end
+
+  with_options numericality: { other_than: 1 } do
+    validates :displacement_id
+    validates :style_id
+    validates :term_id
+    validates :area_id
+    validates :day_id
+  end
+
+
 end
