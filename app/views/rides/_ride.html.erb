@@ -1,0 +1,11 @@
+<div class="card">
+  <div class= "card__body">
+    <%= link_to ride.plan, root_path, class: :card__title %>
+    <p class= "card__summary">
+      <%= "内容: #{ride.text}" %>
+    </p>
+    <div class= "card__user">
+      <%= "by #{ride.user.nickname}" %>
+    </div>
+  </div>
+</div>
