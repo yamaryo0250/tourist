@@ -25,7 +25,7 @@
 | style_id           | integer    | null: false |
 | term_id            | integer    | null: false |
 | area_id            | integer    | null: false |
-| day_id             | date       | null: false |
+| day                | date       | null: false |
 | user               | references | null: false, foreign_key: true |
 
 ### Association

@@ -1,6 +1,4 @@
-<div class="heading">
-    <%= link_to "Tourist", "/", class:"title" %>
-  </div>
+<%= render "shared/second-header" %>
 
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 

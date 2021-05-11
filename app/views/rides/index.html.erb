@@ -1,71 +1,24 @@
-<header>
-  <div class="heading">
-    <%= link_to "Tourist", "/", class:"title" %>
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="first-view">
+    <%= image_tag "/assets/topbike.jpeg", class: "top-image" %>
   </div>
-  <div class="navbar">
-    <%# <ul class="nav-lists">
-      <li>ログイン</li>
-      <li>新規登録</li>
-    </ul> %>
-    <div class="nav-lists">
-      <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn' %>
-        <%= link_to "投稿する", "#", class: 'btn' %>
-      <% else %>
-        <%= link_to "ログイン", new_user_session_path, class: 'btn' %>
-        <%= link_to "新規登録", new_user_registration_path, class: 'btn' %>
-      <% end %>
-    </div>
+  <div class="ride-contents">
+    <h2 class="heading-name">ツーリングプラン一覧</h2>
+    <ul class="ride-lists">
+      <li class="list">
+        <%= link_to '#' , class: "plan" do %>
+        <%= image_tag "/assets/example.jpeg", class: "ride-img" %>
+        <div class='ride-info'>
+          <h3 class='ride-name'>
+          ツーリングプラン1
+          </h3>
+        </div>
+        <% end %>
+      </li>
+    </ul>
   </div>
-</header>
-
-    <div class="contents">
-      <div class="first-view">
-        <%= image_tag "/assets/topbike.jpeg", class: "top-image" %>
-      </div>
-  
-      <div class="ride-contents">
-        <h2 class="heading-name">ツーリングプラン一覧</h2>
-        <ul class="ride-lists">
-          <li class="list">
-            <%= link_to '#' , class: "plan" do %>
-            <%= image_tag "/assets/example.jpeg", class: "ride-img" %>
-            <div class='ride-info'>
-              <h3 class='ride-name'>
-              ツーリングプラン1
-              </h3>
-            </div>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-
-      <%# <div class="middle-content">
-        <h2 class="heading-name">運営情報</h2>
-        <ul class="messages">
-          <li class="message">
-            <div class="message-date">2019/10/06</div>
-            <div>【新規のお客さま限定】<b>10％OFF</b>キャンペーン</div>
-          </li>
-          <li class="message">
-            <div class="message-date">2019/10/03</div>
-            <div>うれしい<b>ポイントアップキャンペーン</b></div>
-          </li>
-          <li class="message">
-            <div class="message-date">2019/09/27</div>
-            <div>2020年成人式 ご予約承ります</div>
-          </li>
-          <li class="message">
-            <div class="message-date">2018/10/03</div>
-            <div>うれしい<b>ポイントアップキャンペーン</b></div>
-          </li>
-          <li class="message">
-            <div class="message-date">2018/09/27</div>
-            <div>2019年成人式 ご予約承ります</div>
-          </li>
-        </ul>
-      </div> %>
-
-    </div>
+</div>
 
   
