@@ -2,23 +2,13 @@
 
 <div class="contents">
   <div class="first-view">
-    <%= image_tag "/assets/topbike.jpeg", class: "top-image" %>
+  
   </div>
+  
   <div class="ride-contents">
     <h2 class="heading-name">ツーリングプラン一覧</h2>
-    <ul class="ride-lists">
-      <li class="list">
-        <%= link_to '#' , class: "plan" do %>
-        <%= image_tag "/assets/example.jpeg", class: "ride-img" %>
-        <div class='ride-info'>
-          <h3 class='ride-name'>
-          ツーリングプラン1
-          </h3>
-        </div>
-        <% end %>
-      </li>
-    </ul>
+    <%= render partial: 'ride', collection: @rides %>
   </div>
 </div>
 
-  
+<%= render "shared/footer" %>
