@@ -1,0 +1,102 @@
+
+.rides-plan-contents {
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.rides-plan-main {
+  background-image: image-url('IMG_9280.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+
+.rides-plan-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.new-rides {
+  padding: 2vh 0;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rides-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.rides-explain {
+  margin-top: 2vh;
+}
+
+.rides-conditions {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.rides-conditions>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  height: 30px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+.post-btn-content {
+  width: 100%;
+  text-align: center;
+}
+
+.post-btn {
+  background: #008000;
+  border: 1px solid #008000;
+  color: #fff;
+  width: 70%;
+  height: 50px;
+  font-size: 14px;
+}
+
+.rides-post-footer {
+  padding: 5vh 0;
+  text-align: center;
+}
+

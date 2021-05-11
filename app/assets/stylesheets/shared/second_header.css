@@ -1,0 +1,18 @@
+.rides-plan-header {
+  height: 50px;
+  width: 100vw;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-title {
+  font-size: 40px;
+  color: #008000;
+  text-decoration: none;
+}
+
+.rides-plan-heading {
+  width: 50%;
+  margin-left: 30px;
+}
