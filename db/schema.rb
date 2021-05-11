@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_05_07_055811) do
     t.integer "style_id", null: false
     t.integer "term_id", null: false
     t.integer "area_id", null: false
-    t.date "day_id", null: false
+    t.date "day", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

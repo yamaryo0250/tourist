@@ -7,7 +7,7 @@ class CreateRides < ActiveRecord::Migration[6.0]
       t.integer :style_id, null: false
       t.integer :term_id, null: false
       t.integer :area_id, null: false
-      t.date :day_id, null: false
+      t.date :day, null: false
       t.references :user, null: false, foreign_key: true
       t.timestamps
     end

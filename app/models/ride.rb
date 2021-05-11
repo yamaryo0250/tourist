@@ -10,6 +10,7 @@ class Ride < ApplicationRecord
   with_options presence: true do
     validates :plan
     validates :text
+    validates :day
   end
 
   with_options numericality: { other_than: 1 } do
@@ -17,7 +18,6 @@ class Ride < ApplicationRecord
     validates :style_id
     validates :term_id
     validates :area_id
-    validates :day_id
   end
 
 
