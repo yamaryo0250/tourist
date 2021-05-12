@@ -11,7 +11,7 @@
 
 ### Association
 
-- has_many : tourings
+- has_many : tourings through: :user_tourings
 - has_many : rides
 - has_many : comments
 
@@ -54,7 +54,7 @@
 
 ### Association
 
-- has_many : user
+- has_many : users, through: :user_tourings
 - belongs_to : ride
 
 
@@ -63,3 +63,8 @@
 | -------------------| -----------| ----------- |
 | user               | references | null: false, foreign_key: true |
 | touring            | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to : user
+- belongs_to : touring
