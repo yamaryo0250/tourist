@@ -48,6 +48,7 @@
         <%="by #{@ride.user.nickname}" %>
       </div>
     </div>
+
     <%# 投稿者とログインユーザーが同じであれば以下を表示する %>
     <% if user_signed_in? && current_user.id == @ride.user_id %>
       <div class="ride__manage">
@@ -64,6 +65,10 @@
       </div>
     <% end %>
     <%# 投稿者とログインユーザーが異なれば、上記を表示する %>
+
+    <div class="participate__members">
+      <p class="any__members"> 参加予定メンバー </p>
+    </div>
   </div>
 </div>
 
