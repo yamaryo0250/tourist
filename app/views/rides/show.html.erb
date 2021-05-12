@@ -1,0 +1,70 @@
+<%= render "shared/header" %>
+
+<div class="inner">
+  <div class="ride__wrapper">
+    <p class="ride__hedding">
+      <%= @ride.plan %>
+    </p>
+
+    
+    <div class="ride__body">
+      <div class="ride__detail">
+        <p class="detail__title">内容</p>
+        <p class="detail__message">
+          <%= @ride.text %>
+        </p>
+      </div>
+      <div class="ride__detail">
+        <p class="detail__title">排気量</p>
+        <p class="detail__message">
+          <%= @ride.displacement.name %>
+        </p>
+      </div>
+      <div class="ride__detail">
+        <p class="detail__title">ツーリングスタイル</p>
+        <p class="detail__messages">
+          <%= @ride.style.name %>
+        </p>
+      </div>
+      <div class="ride__detail">
+        <p class="detail__title">期間</p>
+        <p class="detail__messages">
+          <%= @ride.term.name %>
+        </p>
+      </div>
+      <div class="ride__detail">
+        <p class="detail__title">エリア</p>
+        <p class="detail__messages">
+          <%= @ride.area.name %>
+        </p>
+      </div>
+      <div class="ride__detail">
+        <p class="detail__title">開催日</p>
+        <p class="detail__messages">
+          <%= @ride.day %>
+        </p>
+      </div>
+      <div class= "ride__user">
+        <%="by #{@ride.user.nickname}" %>
+      </div>
+    </div>
+    <%# 投稿者とログインユーザーが同じであれば以下を表示する %>
+    <% if user_signed_in? && current_user.id == @ride.user_id %>
+      <div class="ride__manage">
+        <%= link_to "編集する", root_path, class: :ride__btn %>
+        <%= link_to "削除する", root_path, class: :ride__btn %>
+      </div>
+    <% end %>
+    <%# 投稿者とログインユーザーが同じであれば上記を表示する %>
+
+    <%# 投稿者とログインユーザーが異なれば、以下を表示する %>
+    <% if user_signed_in? && current_user.id != @ride.user_id %>
+      <div class="ride__manage">
+        <%= link_to "参加する", root_path, class: :participate__btn %>
+      </div>
+    <% end %>
+    <%# 投稿者とログインユーザーが異なれば、上記を表示する %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

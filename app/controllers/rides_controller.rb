@@ -18,6 +18,10 @@ class RidesController < ApplicationController
     end
   end
 
+  def show
+    @ride = Ride.find(params[:id])
+  end
+
   private
   def ride_params
     params.require(:ride).permit(:plan, :displacement_id, :text, :style_id, :term_id, :area_id, :day).merge(user_id: current_user.id)
