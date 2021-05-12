@@ -1,5 +1,7 @@
 class RidesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :ride_find, except: [:index, :new, :create]
+  before_action :redirect, only: [:edit, :update, :destroy]
 
   def index
     @rides = Ride.order('created_at DESC')
@@ -19,18 +21,12 @@ class RidesController < ApplicationController
   end
 
   def show
-    @ride = Ride.find(params[:id])
   end
 
   def edit
-    @ride = Ride.find(params[:id])
-    unless user_signed_in? && current_user.id == @ride.user.id
-      redirect_to action: :index
-    end
   end
 
   def update
-    @ride = Ride.find(params[:id])
     if @ride.update(ride_params)
       redirect_to ride_path
     else
@@ -38,8 +34,25 @@ class RidesController < ApplicationController
     end
   end
 
+  def destroy
+    @ride.destroy
+    redirect_to root_path
+  end
+
+
+
+
   private
+
   def ride_params
     params.require(:ride).permit(:plan, :displacement_id, :text, :style_id, :term_id, :area_id, :day).merge(user_id: current_user.id)
+  end
+
+  def ride_find
+    @ride = Ride.find(params[:id])
+  end
+
+  def redirect
+    redirect_to action: :index unless current_user.id == @ride.user_id
   end
 end

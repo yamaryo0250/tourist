@@ -1,9 +1,9 @@
 .contents {
-  background-color: #556b2f;
+  background-color: #e6ffe9;
 }
 
 
-.first-view{
+.first-view {
   height: 70vh;
   width: 100vw;
   background-image: image-url('topbike2.jpeg');
@@ -12,7 +12,14 @@
   background-position: top center;
 }
 
-.ride-contents{
+.login-user{
+  background-color: #e6ffe9;
+  margin: 10px 0 0 10px; 
+  font-size: 16px;
+  color: green;
+}
+
+.ride-contents {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -22,11 +29,6 @@
 
 .ride-contents {
   background-color: #e6ffe9;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-  // align-items: center;
-  // min-height: calc(100vh - 161px);
 } 
 
 .heading-name {
@@ -42,6 +44,7 @@
 .card__body {
   width: 50vw;
   border: 1px solid green;
+  border-radius: 5px;
 }
 
 .card__title {
