@@ -5,9 +5,11 @@
   
   </div>
 
-  <div class="login-user">
-    <%= "ログインユーザー: #{current_user.nickname}" %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="login-user">
+      <%= "ログインユーザー: #{current_user.nickname}" %>
+    </div>
+  <% end %>
   
   <div class="ride-contents">
     <h2 class="heading-name">ツーリングプラン一覧</h2>
