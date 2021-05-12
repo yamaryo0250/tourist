@@ -38,6 +38,12 @@ class RidesController < ApplicationController
     end
   end
 
+  def destroy
+    @ride = Ride.find(params[:id])
+    @ride.destroy
+    redirect_to root_path
+  end
+
   private
   def ride_params
     params.require(:ride).permit(:plan, :displacement_id, :text, :style_id, :term_id, :area_id, :day).merge(user_id: current_user.id)

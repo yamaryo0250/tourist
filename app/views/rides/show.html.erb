@@ -52,7 +52,7 @@
     <% if user_signed_in? && current_user.id == @ride.user_id %>
       <div class="ride__manage">
         <%= link_to "編集する", edit_ride_path, class: :ride__btn %>
-        <%= link_to "削除する", root_path, class: :ride__btn %>
+        <%= link_to "削除する", ride_path(@ride.id), method: :delete, class: :ride__btn %>
       </div>
     <% end %>
     <%# 投稿者とログインユーザーが同じであれば上記を表示する %>
