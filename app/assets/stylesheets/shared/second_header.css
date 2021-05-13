@@ -1,18 +1,12 @@
-.rides-plan-header {
-  height: 50px;
-  width: 100vw;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
+.second-header {
+  background-color: #f0f0f0;
 }
 
-.second-title {
-  font-size: 40px;
-  color: #008000;
-  text-decoration: none;
+.second__nav {
+  margin-left: 46vw;
 }
 
-.rides-plan-heading {
-  width: 50%;
-  margin-left: 30px;
+.second_logo {
+  width: 100px;
+  margin-left: 5vw;
 }
