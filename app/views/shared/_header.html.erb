@@ -1,19 +1,23 @@
-<header>
+<header class="header">
   <div class="heading">
-    <%= link_to "Tourist", "/", class:"title" %>
-  </div>
-  <div class="navbar">
-    <%# <ul class="nav-lists">
-      <li>ログイン</li>
-      <li>新規登録</li>
-    </ul> %>
-    <div class="nav-lists">
+    <div class="top__nav">
+      <div class="nav__left">
+        <%= link_to image_tag("logo.png", class: :logo), root_path %>
+      </div>
       <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn' %>
-        <%= link_to "投稿する", new_ride_path, class: 'btn' %>
+      <%# ログインしているときは以下を表示するようにしましょう %>
+        <div class="nav__right">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
+          <%= link_to "募る", new_ride_path, class: :nav__btn %>
+        </div> 
+      <%# // ログインしているときは上記を表示するようにしましょう %>
       <% else %>
-        <%= link_to "ログイン", new_user_session_path, class: 'btn' %>
-        <%= link_to "新規登録", new_user_registration_path, class: 'btn' %>
+      <%# ログインしていないときは以下を表示するようにしましょう %>
+        <div class="nav__right">
+          <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+          <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+        </div>
+      <%# // ログインしていないときは上記を表示するようにしましょう %>
       <% end %>
     </div>
   </div>
