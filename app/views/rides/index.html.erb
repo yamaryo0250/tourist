@@ -6,7 +6,10 @@
   </div>
 
   <% if user_signed_in? %>
-      <%= link_to "ログインユーザー: #{current_user.nickname}", user_path(current_user.id), class: :login_user %>
+    <div class = login_rider>
+      <%= image_tag("rider.png", class: :rider_logo) %>
+      <%= link_to (current_user.nickname), user_path(current_user.id), class: :login_user %>
+    </div>
   <% end %>
   
   <div class="ride-contents">

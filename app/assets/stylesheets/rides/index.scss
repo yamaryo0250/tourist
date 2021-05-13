@@ -12,10 +12,17 @@
   background-position: top center;
 }
 
-.login_user{
+.login_rider {
+  margin: 10px 0 0 10px;
+}
+
+.rider_logo {
+  width: 50px;
+}
+
+.login_user {
   display: block;
-  background-color: #e6ffe9;
-  margin: 10px 0 0 10px; 
+  background-color: #e6ffe9; 
   font-size: 16px;
   color: green;
   text-decoration: underline;

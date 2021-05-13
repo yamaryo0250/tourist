@@ -1,28 +1,27 @@
+<%= render "shared/second-header" %>
+
 <div class="rides-plan-contents">
-  
-  <%= render "shared/second-header" %>
-
   <div class="rides-plan-main">
-    <h2 class="rides-plan-title">ツーリングプランを入力</h2>
+  <h2 class="rides-plan-title">ツーリングプランを入力</h2>
 
-    <%= form_with(model: @ride, local: true) do |f| %>
+  <%= form_with(model: @ride, local: true) do |f| %>
 
-    <%= render 'shared/error_messages', model: f.object %>
+  <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="new-rides">
+  <div class="new-rides">
+    <div class="weight-bold-text">
+      プラン名
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :plan, class:"rides-text", id:"ride-name", placeholder:"プラン名（必須 30文字まで)", maxlength:"30" %>
+    <div class="rides-explain">
       <div class="weight-bold-text">
-        プラン名
+        プランの内容、詳細
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :plan, class:"rides-text", id:"ride-name", placeholder:"プラン名（必須 30文字まで)", maxlength:"30" %>
-      <div class="rides-explain">
-        <div class="weight-bold-text">
-          プランの内容、詳細
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :text, class:"rides-text", id:"ride-info", placeholder:"プランの内容や集合場所の詳細ついて（必須 1,000文字まで）（提案や、注意点など）例）葛西臨海公園集合で、熱海あたりを目指したいです。すり抜け等は行わず、安全第一でゆったりとしたツーリングにしたいです。美味しそうなラーメン屋にもいきたいですね。" ,rows:"7" ,maxlength:"1000" %>
-      </div>
+      <%= f.text_area :text, class:"rides-text", id:"ride-info", placeholder:"プランの内容や集合場所の詳細ついて（必須 1,000文字まで）（提案や、注意点など）例）葛西臨海公園集合で、熱海あたりを目指したいです。すり抜け等は行わず、安全第一でゆったりとしたツーリングにしたいです。美味しそうなラーメン屋にもいきたいですね。" ,rows:"7" ,maxlength:"1000" %>
     </div>
+  </div>
     
     
     <div class="weight-bold-text">希望の条件</div>
