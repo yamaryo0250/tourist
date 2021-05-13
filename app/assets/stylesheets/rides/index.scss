@@ -12,11 +12,13 @@
   background-position: top center;
 }
 
-.login-user{
+.login_user{
+  display: block;
   background-color: #e6ffe9;
   margin: 10px 0 0 10px; 
   font-size: 16px;
   color: green;
+  text-decoration: underline;
 }
 
 .ride-contents {
@@ -45,6 +47,7 @@
   width: 50vw;
   border: 1px solid green;
   border-radius: 5px;
+  background-color: #f0f0f0;
 }
 
 .card__title {
@@ -65,4 +68,3 @@
   text-align: right;
   text-decoration: underline;
 }
-

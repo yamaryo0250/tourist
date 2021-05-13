@@ -44,9 +44,7 @@
           <%= @ride.day %>
         </p>
       </div>
-      <div class= "ride__user">
-        <%="by #{@ride.user.nickname}" %>
-      </div>
+      <%= link_to "by #{@ride.user.nickname}", user_path(@ride.user.id), class: :ride__user %>
     </div>
 
     <%# 投稿者とログインユーザーが同じであれば以下を表示する %>

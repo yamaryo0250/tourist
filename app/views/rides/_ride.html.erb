@@ -4,8 +4,6 @@
     <p class= "card__summary">
       <%= "内容: #{ride.text}" %>
     </p>
-    <div class= "card__user">
-      <%= "by #{ride.user.nickname}" %>
-    </div>
+    <%= link_to "by #{ride.user.nickname}", user_path(ride.user.id), class: :card__user %>
   </div>
 </div>
