@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'rides/index'
   root to: "rides#index"
   resources :rides
+  resources :users, only: :show
 end

@@ -1,0 +1,37 @@
+<%= render "shared/second-header" %>
+
+<div class="user__wrapper">
+  <h2 class="page-heading">
+    <%= "#{@user.nickname}のマイページ"%>
+  </h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th class="table__col1">ニックネーム</th>
+        <td class="table__col2"><%= @user.nickname %></td>
+      </tr>
+      <tr>
+        <th class="table__col1">メインエリア</th>
+        <td class="table__col2"><%= "エリア" %></td>
+      </tr>
+      <tr>
+        <th class="table__col1">ツーリングスタイル</th>
+        <td class="table__col2"><%= "スタイル" %></td>
+      </tr>
+      <tr>
+        <th class="table__col1">所有車</th>
+        <td class="table__col2"><%= "所有車" %></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 class="page-heading">
+    <%= "#{@user.nickname}の開催"%>
+  </h2>
+  <div class="posts">
+    <div class="user__card">
+      <%= render partial: 'rides/ride', collection: @rides %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
