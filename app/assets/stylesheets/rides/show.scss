@@ -65,9 +65,9 @@
   transition: 0.4s ease;
 }
 
-.prototype__btn:hover {
-  color: #fff;
-  background: #999;
+.participate__btn:hover {
+  color: red;
+  background-color: white;
 }
 
 .ride__detail {
@@ -80,6 +80,10 @@
 .detail__title {
   font-size: 20px;
   font-weight: bold;
+}
+
+.ride__user:hover {
+  color: #008000;
 }
 
 .participate__members {
