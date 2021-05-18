@@ -36,6 +36,7 @@
 <br />
 
 ## アプリケーションイメージ
+[![Image from Gyazo](https://i.gyazo.com/a9a6712dedf6bbce3626ae958f0a0dfe.gif)](https://gyazo.com/a9a6712dedf6bbce3626ae958f0a0dfe)
 トップページ  
 [![Image from Gyazo](https://i.gyazo.com/43a466c516ec3b84402dcfc2a62907d5.jpg)](https://gyazo.com/43a466c516ec3b84402dcfc2a62907d5)  
 投稿ページ  
