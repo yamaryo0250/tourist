@@ -36,11 +36,12 @@
 <br />
 
 ## アプリケーションイメージ
+トップページ
 ![46caec6d2248eeabd0a78e5e3a73fe9a](https://user-images.githubusercontent.com/80947802/118604229-e01d1080-b7ef-11eb-8d8f-b3e7bf19c1e2.gif)  
-トップページ  
-[![Image from Gyazo](https://i.gyazo.com/43a466c516ec3b84402dcfc2a62907d5.jpg)](https://gyazo.com/43a466c516ec3b84402dcfc2a62907d5)  
 投稿ページ  
 [![Image from Gyazo](https://i.gyazo.com/cc6a6afcd29b928fee9e699d7838b861.jpg)](https://gyazo.com/cc6a6afcd29b928fee9e699d7838b861)
+投稿詳細ページへ遷移  
+![9a3b5da9daf2968aefeb69d66e8c9fbd](https://user-images.githubusercontent.com/80947802/118605774-99301a80-b7f1-11eb-98f5-d9e600d110e8.gif)
 <br />
 <br />
 
