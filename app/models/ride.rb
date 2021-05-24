@@ -6,6 +6,7 @@ class Ride < ApplicationRecord
   belongs_to :area
 
   belongs_to :user
+  has_one :touring
 
   with_options presence: true do
     validates :plan
