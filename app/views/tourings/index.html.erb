@@ -1,0 +1,40 @@
+<%= render "shared/header" %>
+
+<div class='entry-contents'>
+  <div class='entry-main'>
+    <h1 class='entry-title-text'>
+      参加プランの確認
+    </h1>
+    <%# 参加プラン内容の表示 %>
+    <div class='entry-ride-info'>
+      <div class='entry-ride-content'>
+        <h2 class='entry-ride-text'>
+          プラン名：<%= @ride.plan %>
+        </h2>
+        <p class='entry-ride-item'>・ツーリングスタイル：<%= @ride.style.name %></p>
+        <p class='entry-ride-item'>・開催日時：<%= @ride.day %></p>
+      </div>
+    </div>
+    <%# /参加プラン内容の表示 %>
+
+    <%# 注意書き %>
+    <div class='precautionary-statement'>
+      <h1 class='precautionary-statement-title'>
+        注意事項
+      </h1>
+      <p class='precautionary-statement-text'>
+        ・ツーリングスタイルに関係なく、交通規制に従った運転をお願いします。<br>
+        ・参加決定後の無断キャンセル等は無いようにお願いします。<br>
+        ・ツーリング中の事故等トラブルに関しては、参加者同士での解決をお願いします。
+      </p>
+    </div>
+    <%# /注意書き %>
+
+    <%= form_with model: @touring, url: ride_tourings_path, id: 'entry-form', class: 'entry-form-wrap',local: true do |f| %>
+      <div class='entry-btn'>
+        <%= f.submit "参加決定する" ,class:"entry-red-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>
