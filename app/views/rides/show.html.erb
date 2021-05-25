@@ -47,22 +47,20 @@
       <%= link_to "by #{@ride.user.nickname}", user_path(@ride.user.id), class: :ride__user %>
     </div>
 
-    <%# 投稿者とログインユーザーが同じであれば以下を表示する %>
-    <% if user_signed_in? && current_user.id == @ride.user_id %>
-      <div class="ride__manage">
-        <%= link_to "編集する", edit_ride_path, class: :ride__btn %>
-        <%= link_to "削除する", ride_path(@ride.id), method: :delete, class: :ride__btn %>
-      </div>
-    <% end %>
-    <%# 投稿者とログインユーザーが同じであれば上記を表示する %>
 
-    <%# 投稿者とログインユーザーが異なれば、以下を表示する %>
-    <% if user_signed_in? && current_user.id != @ride.user_id %>
-      <div class="ride__manage">
-        <%= link_to "参加する", root_path, class: :participate__btn %>
-      </div>
+    <% if user_signed_in? %>
+      <% if current_user.id == @ride.user_id  %>
+        <div class= "ride__manage">
+          <%= link_to "編集する", edit_ride_path(@ride.id), method: :get, class: "ride__btn" %>
+          <%= link_to "削除する", ride_path(@ride.id) , method: :delete, class:"ride__btn" %>
+        </div>
+      <% else %>
+        <div class="ride__manage">
+          <%= link_to "参加する", ride_tourings_path(@ride.id),class:"participate__btn"%>
+        </div>
+      <% end %>
     <% end %>
-    <%# 投稿者とログインユーザーが異なれば、上記を表示する %>
+
 
     <div class="participate__members">
       <p class="any__members"> 参加予定メンバー </p>
