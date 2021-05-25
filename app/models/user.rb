@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :rides
+  has_many :user_tourings
   has_many :tourings, through: :user_tourings
 
   with_options presence: true do

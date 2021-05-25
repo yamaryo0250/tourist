@@ -81,6 +81,7 @@
 
 ### Association
 
+- has_many : user_tourings
 - has_many : tourings through: :user_tourings
 - has_many : rides
 - has_many : comments
@@ -124,6 +125,7 @@
 
 ### Association
 
+- has_many :user_tourings
 - has_many : users, through: :user_tourings
 - belongs_to : ride
 
