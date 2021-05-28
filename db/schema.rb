@@ -27,12 +27,10 @@ ActiveRecord::Schema.define(version: 2021_05_25_100816) do
   end
 
   create_table "tourings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.bigint "ride_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ride_id"], name: "index_tourings_on_ride_id"
-    t.index ["user_id"], name: "index_tourings_on_user_id"
   end
 
   create_table "user_tourings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -60,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_05_25_100816) do
 
   add_foreign_key "rides", "users"
   add_foreign_key "tourings", "rides"
-  add_foreign_key "tourings", "users"
   add_foreign_key "user_tourings", "tourings"
   add_foreign_key "user_tourings", "users"
 end
