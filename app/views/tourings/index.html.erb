@@ -31,6 +31,7 @@
     <%# /注意書き %>
 
     <%= form_with model: @touring, url: ride_tourings_path, id: 'entry-form', class: 'entry-form-wrap',local: true do |f| %>
+      <input name="touring[ride_id]" type="hidden" value=<%= @ride.id %> >
       <div class='entry-btn'>
         <%= f.submit "参加決定する" ,class:"entry-red-btn" %>
       </div>
